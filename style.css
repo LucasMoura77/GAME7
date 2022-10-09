@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxGame{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: black;   
+    overflow: hidden;
+}
+
+.btns{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.btnsAppearance {
+    width: 50vw;
+    height: 100vh;
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.700);
+    font-size: 3em;
+}
+
+.playerBlock{
+    position: absolute;
+    width: 33%;
+    height: 200px;
+    background-color: #00ff00;
+}
+
+.cpuBlock {
+    position: absolute;
+    width: 33%;
+    height: 200px;
+    top: -200px;
+    background-color: #ff0000;
+    
+}
+
+
+.playerScore{
+    position: absolute;
+    top: 43%;
+    color: white;
+    font-weight: bolder;
+    font-size: 4em;
+    z-index: 1;
+}
+
+.gameOver{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 35%;
+    border: 5px solid #00ff00;
+    background-color: black;
+    border-radius: 20px;
+    top: 25%;
+    z-index: 1;
+    visibility: hidden;
+    color: #00ff00;
+    font-weight: bolder;
+}
+
+.reloadGame{
+    color: #00ff00;
+    font-size: 2em;
+    border: none;
+    background-color: black;
+    text-shadow: 5px 10px #00ff00;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+    animation: shadowEffect 7s linear infinite;
+}
+
+.gameOverTxt, .scoreText{
+    font-size: 1.5em;
+}
+
+
+.game{
+    color: #00ff00;
+    font-size: 2.7em;
+    border: none;
+    background-color: black;
+    text-shadow: 5px 10px #00ff00;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+    animation: shadowEffect 7s linear infinite;
+}
+
+.gameName {
+    font-size: 1.5em;
+}
+
+.newGame {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 35%;
+    border: 5px solid #00ff00;
+    background-color: black;
+    border-radius: 20px;
+    top: 25%;
+    z-index: 3;
+    visibility: visible;
+    color: #00ff00;
+    font-weight: bolder;
+}
+
+.btnEsq {
+    animation: btnEsqAnimate 2s infinite linear;
+}
+
+@keyframes btnEsqAnimate{
+    0%{
+        margin-right: 0px;
+    }
+    50%{
+        margin-right: 77px;
+    }
+    100%{
+        margin-right: 0px;
+    }
+}
+
+@keyframes shadowEffect{
+    0%{
+        -webkit-text-stroke-color: #00ff00;
+        text-shadow: 0 0 0.3em #00ff00;
+    }25%{
+        -webkit-text-stroke-color: #00ff00;
+        text-shadow: 0 0 1em #00ff00;
+    }50%{
+        -webkit-text-stroke-color: #00ff00;
+        text-shadow: 0 0 0.3em #00ff00;
+    }75%{
+        -webkit-text-stroke-color: #00ff00;
+        text-shadow: 0 0 1em #00ff00;
+    }100%{
+        -webkit-text-stroke-color: #00ff00;
+        text-shadow: 0 0 0.3em #00ff00;
+    }   
+}
